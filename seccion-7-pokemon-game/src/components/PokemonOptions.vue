@@ -15,10 +15,17 @@
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from "vue";
+
+interface Pokemon {
+  id: number;
+  name: string;
+}
+
+export default defineComponent({
   props: {
     pokemons: {
-      type: Array,
+      type: Array as () => Array<Pokemon>,
       required: true,
     },
   },
@@ -34,7 +41,7 @@ export default {
   mounted() {
     console.log("mounted 2");
   },
-};
+});
 </script>
 
 <style scoped>

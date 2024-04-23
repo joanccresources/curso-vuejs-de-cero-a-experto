@@ -23,15 +23,17 @@
 </template>
 
 <script lang="ts">
-interface Pokemon {
-  id: number;
-  name: string;
-}
+import { defineComponent } from "vue";
 import PokemonPicture from "@/components/PokemonPicture.vue";
 import PokemonOptions from "@/components/PokemonOptions.vue";
 import { getPokemonOptions } from "@/helpers";
 
-export default {
+interface Pokemon {
+  id: number;
+  name: string;
+}
+
+export default defineComponent({
   components: {
     PokemonPicture,
     PokemonOptions,
@@ -97,5 +99,5 @@ export default {
     // Una vez montado ejecutamos el metodo
     this.mixPokemonArray();
   },
-};
+});
 </script>

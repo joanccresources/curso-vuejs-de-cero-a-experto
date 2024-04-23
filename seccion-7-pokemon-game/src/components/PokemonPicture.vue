@@ -11,7 +11,9 @@
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from "vue";
+
+export default defineComponent({
   props: {
     pokemonId: {
       type: Number,
@@ -23,12 +25,19 @@ export default {
       default: false,
     },
   },
+
+  data(): { id: number } {
+    return {
+      id: this.pokemonId,
+    };
+  },
+
   computed: {
-    imgSrc() {
-      return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.pokemonId}.svg`;
+    imgSrc(): string {
+      return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.id}.svg`;
     },
   },
-};
+});
 </script>
 
 <style lang="scss" scoped>
