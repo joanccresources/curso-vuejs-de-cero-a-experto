@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonOptions Component debe hacer match con el snapshoot 1`] = `
+<div class="mt-4">
+  <ul class="list-group">
+    <!-- Debemos ponerle su :key -->
+    <li class="list-group-item list-group-item-action">bulbasaur</li>
+    <li class="list-group-item list-group-item-action">ivysaur</li>
+    <li class="list-group-item list-group-item-action">venusaur</li>
+    <li class="list-group-item list-group-item-action">charmander</li>
+  </ul>
+</div>
+`;
